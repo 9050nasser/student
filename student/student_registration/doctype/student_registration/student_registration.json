@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SR-.####",
+ "creation": "2023-06-03 02:03:49.480128",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student_fname",
+  "student_lname",
+  "student_full_name",
+  "student_bday",
+  "student_mobile",
+  "student_mail",
+  "student_status",
+  "student_city",
+  "student_other_city",
+  "student_passport",
+  "student_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "student_fname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u0627\u0644\u0627\u0633\u0645 \u0627\u0644\u0627\u0648\u0644",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_lname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u0627\u0644\u0627\u0633\u0645 \u0627\u0644\u0627\u062e\u064a\u0631",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_bday",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_mobile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u062c\u0648\u0627\u0644",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_mail",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0627\u0644\u0643\u062a\u0631\u0648\u0646\u064a",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_status",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u062d\u0627\u0644\u0629",
+   "options": "\n\u062f\u0627\u062e\u0644 \u0627\u0644\u0645\u0645\u0644\u0643\u0629\n\u062e\u0627\u0631\u062c \u0627\u0644\u0645\u0645\u0644\u0643\u0629",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.student_status == '\u062f\u0627\u062e\u0644 \u0627\u0644\u0645\u0645\u0644\u0643\u0629'",
+   "fieldname": "student_city",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u0645\u062f\u064a\u0646\u0629",
+   "mandatory_depends_on": "eval:doc.student_status == '\u062f\u0627\u062e\u0644 \u0627\u0644\u0645\u0645\u0644\u0643\u0629'",
+   "options": "\n\u0627\u0644\u0631\u064a\u0627\u0636\n\u0645\u0643\u0629\n\u0627\u0644\u0645\u062f\u064a\u0646\u0629 \u0627\u0644\u0645\u0646\u0648\u0631\u0629\n\u062c\u062f\u0629\n\u0628\u0631\u064a\u062f\u0629\n\u0627\u0644\u062f\u0645\u0627\u0645\n\u0623\u0628\u0647\u0627\n\u062a\u0628\u0648\u0643\n\u062d\u0627\u0626\u0644\n\u0639\u0631\u0639\u0631\n\u062c\u064a\u0632\u0627\u0646\n\u0646\u062c\u0631\u0627\u0646\n\u0627\u0644\u0628\u0627\u062d\u0629\n\u0633\u0643\u0627\u0643\u0627\n\u0623\u062e\u0631\u0649"
+  },
+  {
+   "fieldname": "student_passport",
+   "fieldtype": "Attach Image",
+   "label": "\u0635\u0648\u0631\u0629 \u062c\u0648\u0627\u0632 \u0627\u0644\u0633\u0641\u0631"
+  },
+  {
+   "fieldname": "student_notes",
+   "fieldtype": "Text",
+   "label": "\u0645\u0644\u0627\u062d\u0638\u0627\u062a"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Student Registration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "student_full_name",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0627\u0633\u0645 \u0643\u0627\u0645\u0644",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.student_city == '\u0623\u062e\u0631\u0649'",
+   "fieldname": "student_other_city",
+   "fieldtype": "Data",
+   "label": "\u0627\u0633\u0645 \u0627\u0644\u0645\u062f\u064a\u0646\u0629",
+   "mandatory_depends_on": "eval:doc.student_city == '\u0623\u062e\u0631\u0649'"
+  }
+ ],
+ "image_field": "student_passport",
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "User",
+   "link_doctype": "User",
+   "link_fieldname": "bio"
+  }
+ ],
+ "modified": "2023-06-03 04:42:21.388017",
+ "modified_by": "Administrator",
+ "module": "Student Registration",
+ "name": "Student Registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

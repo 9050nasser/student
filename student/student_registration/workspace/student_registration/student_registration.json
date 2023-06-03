@@ -1,0 +1,35 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "charts_label": "",
+ "creation": "2023-06-03 05:44:27.081154",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "sell",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Student Registration",
+ "links": [],
+ "modified": "2023-06-03 05:45:35.795170",
+ "modified_by": "Administrator",
+ "module": "Student Registration",
+ "name": "Student Registration",
+ "onboarding": "",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Student Registration",
+   "link_to": "Student Registration",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": ""
+}
