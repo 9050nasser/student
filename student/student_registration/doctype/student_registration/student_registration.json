@@ -13,10 +13,15 @@
   "student_bday",
   "student_mobile",
   "student_mail",
+  "student_grade",
   "student_status",
   "student_city",
   "student_other_city",
   "student_passport",
+  "student_bcert",
+  "student_cert1",
+  "student_cert2",
+  "student_cert3",
   "student_notes",
   "amended_from"
  ],
@@ -44,7 +49,7 @@
   },
   {
    "fieldname": "student_mobile",
-   "fieldtype": "Data",
+   "fieldtype": "Phone",
    "in_list_view": 1,
    "label": "\u0631\u0642\u0645 \u0627\u0644\u062c\u0648\u0627\u0644",
    "options": "Phone",
@@ -75,7 +80,8 @@
   {
    "fieldname": "student_passport",
    "fieldtype": "Attach Image",
-   "label": "\u0635\u0648\u0631\u0629 \u062c\u0648\u0627\u0632 \u0627\u0644\u0633\u0641\u0631"
+   "label": "\u0635\u0648\u0631\u0629 \u062c\u0648\u0627\u0632 \u0627\u0644\u0633\u0641\u0631",
+   "reqd": 1
   },
   {
    "fieldname": "student_notes",
@@ -103,6 +109,35 @@
    "fieldtype": "Data",
    "label": "\u0627\u0633\u0645 \u0627\u0644\u0645\u062f\u064a\u0646\u0629",
    "mandatory_depends_on": "eval:doc.student_city == '\u0623\u062e\u0631\u0649'"
+  },
+  {
+   "fieldname": "student_grade",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u0633\u0646\u0629 \u0627\u0644\u062f\u0631\u0627\u0633\u064a\u0629",
+   "options": "\n\u0623\u0648\u0644 \u0627\u0628\u062a\u062f\u0627\u0626\u064a\n\u062b\u0627\u0646\u064a \u0627\u0628\u062a\u062f\u0627\u0626\u064a\n\u062b\u0627\u0644\u062b \u0627\u0628\u062a\u062f\u0627\u0626\u064a\n\u0631\u0627\u0628\u0639 \u0627\u0628\u062a\u062f\u0627\u0626\u064a\n\u062e\u0627\u0645\u0633 \u0627\u0628\u062a\u062f\u0627\u0626\u064a\n\u0623\u0648\u0644 \u0645\u062a\u0648\u0633\u0637\n\u062b\u0627\u0646\u064a \u0645\u062a\u0648\u0633\u0637\n\u062b\u0627\u0644\u062b \u0645\u062a\u0648\u0633\u0637\n\u0623\u0648\u0644 \u062b\u0627\u0646\u0648\u064a\n\u062b\u0627\u0646\u064a \u062b\u0627\u0646\u0648\u064a",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_bcert",
+   "fieldtype": "Attach Image",
+   "label": "\u0635\u0648\u0631\u0629 \u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_cert1",
+   "fieldtype": "Attach Image",
+   "label": "\u0635\u0648\u0631\u0629 \u0627\u0644\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u062f\u0631\u0627\u0633\u064a\u0629 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_cert2",
+   "fieldtype": "Attach Image",
+   "label": "\u0635\u0648\u0631\u0629 \u0627\u0644\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u062f\u0631\u0627\u0633\u064a\u0629 2"
+  },
+  {
+   "fieldname": "student_cert3",
+   "fieldtype": "Attach Image",
+   "label": "\u0635\u0648\u0631\u0629 \u0627\u0644\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u062f\u0631\u0627\u0633\u064a\u0629 3"
   }
  ],
  "image_field": "student_passport",
@@ -115,7 +150,7 @@
    "link_fieldname": "bio"
   }
  ],
- "modified": "2023-06-03 04:42:21.388017",
+ "modified": "2023-06-03 10:45:31.044509",
  "modified_by": "Administrator",
  "module": "Student Registration",
  "name": "Student Registration",
