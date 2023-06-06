@@ -5,7 +5,7 @@ frappe.ready(function() {
 	  var minDate = new Date('2017-01-01');
   
 	  if (birthday < minDate) {
-		frappe.msgprint('Not allowed before 1-1-2017');
+		frappe.msgprint('السن اكبر من المسموح');
 		return false;
 	  }
   
