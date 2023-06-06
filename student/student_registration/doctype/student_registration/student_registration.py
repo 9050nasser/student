@@ -5,7 +5,10 @@ import frappe
 from frappe import _
 from frappe.model.document import Document
 
+
 class StudentRegistration(Document):
+		
+
 	def before_insert(self):
 		self.student_full_name = f'{self.student_fname} {self.student_lname or ""}'
 

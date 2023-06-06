@@ -16,5 +16,17 @@ student/config/__init__.py
 student/config/desktop.py
 student/config/docs.py
 student/student_registration/__init__.py
+student/student_registration/doctype/__init__.py
+student/student_registration/doctype/student_registration/__init__.py
+student/student_registration/doctype/student_registration/student_registration.js
+student/student_registration/doctype/student_registration/student_registration.json
+student/student_registration/doctype/student_registration/student_registration.py
+student/student_registration/doctype/student_registration/test_student_registration.py
+student/student_registration/web_form/__init__.py
+student/student_registration/web_form/student_register/__init__.py
+student/student_registration/web_form/student_register/student_register.js
+student/student_registration/web_form/student_register/student_register.json
+student/student_registration/web_form/student_register/student_register.py
+student/student_registration/workspace/student_registration/student_registration.json
 student/templates/__init__.py
 student/templates/pages/__init__.py

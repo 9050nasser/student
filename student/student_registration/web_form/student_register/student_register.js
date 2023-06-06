@@ -1,3 +1,15 @@
 frappe.ready(function() {
-	// bind events here
-})
+	frappe.web_form.validate = function() {
+	  var data = frappe.web_form.get_values();
+	  var birthday = new Date(data.student_bday);
+	  var minDate = new Date('2017-01-01');
+  
+	  if (birthday < minDate) {
+		frappe.msgprint('Not allowed before 1-1-2017');
+		return false;
+	  }
+  
+	  return true;
+	};
+  });
+  

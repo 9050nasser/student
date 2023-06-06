@@ -7,21 +7,31 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "complete",
   "student_fname",
   "student_lname",
   "student_full_name",
   "student_bday",
   "student_mobile",
+  "column_break_tvoj4",
   "student_mail",
   "student_grade",
   "student_status",
   "student_city",
   "student_other_city",
+  "section_break_cko1n",
   "student_passport",
+  "student_passport_pre",
   "student_bcert",
+  "student_bcert_pre",
+  "column_break_wcscd",
   "student_cert1",
+  "student_cert1_pre",
   "student_cert2",
+  "student_cert2_pre",
   "student_cert3",
+  "student_cert3_pre",
+  "section_break_qb6k0",
   "student_notes",
   "amended_from"
  ],
@@ -49,7 +59,7 @@
   },
   {
    "fieldname": "student_mobile",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "\u0631\u0642\u0645 \u0627\u0644\u062c\u0648\u0627\u0644",
    "options": "Phone",
@@ -78,6 +88,7 @@
    "options": "\n\u0627\u0644\u0631\u064a\u0627\u0636\n\u0645\u0643\u0629\n\u0627\u0644\u0645\u062f\u064a\u0646\u0629 \u0627\u0644\u0645\u0646\u0648\u0631\u0629\n\u062c\u062f\u0629\n\u0628\u0631\u064a\u062f\u0629\n\u0627\u0644\u062f\u0645\u0627\u0645\n\u0623\u0628\u0647\u0627\n\u062a\u0628\u0648\u0643\n\u062d\u0627\u0626\u0644\n\u0639\u0631\u0639\u0631\n\u062c\u064a\u0632\u0627\u0646\n\u0646\u062c\u0631\u0627\u0646\n\u0627\u0644\u0628\u0627\u062d\u0629\n\u0633\u0643\u0627\u0643\u0627\n\u0623\u062e\u0631\u0649"
   },
   {
+   "fetch_from": "doc.student_bcert",
    "fieldname": "student_passport",
    "fieldtype": "Attach Image",
    "label": "\u0635\u0648\u0631\u0629 \u062c\u0648\u0627\u0632 \u0627\u0644\u0633\u0641\u0631",
@@ -138,6 +149,64 @@
    "fieldname": "student_cert3",
    "fieldtype": "Attach Image",
    "label": "\u0635\u0648\u0631\u0629 \u0627\u0644\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u062f\u0631\u0627\u0633\u064a\u0629 3"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "complete",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "\u0645\u0643\u062a\u0645\u0644"
+  },
+  {
+   "default": "student_bcert",
+   "fieldname": "student_passport_pre",
+   "fieldtype": "Image",
+   "label": "\u0635\u0648\u0631\u0629 \u062c\u0648\u0627\u0632 \u0627\u0644\u0633\u0641\u0631",
+   "options": "student_passport"
+  },
+  {
+   "fieldname": "student_bcert_pre",
+   "fieldtype": "Image",
+   "label": "\u0635\u0648\u0631\u0629 \u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u0645\u064a\u0644\u0627\u062f",
+   "options": "student_bcert"
+  },
+  {
+   "depends_on": "eval:doc.student_cert1",
+   "fieldname": "student_cert1_pre",
+   "fieldtype": "Image",
+   "label": "\u0635\u0648\u0631\u0629 \u0627\u0644\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u062f\u0631\u0627\u0633\u064a\u0629 1",
+   "options": "student_cert1"
+  },
+  {
+   "depends_on": "eval:doc.student_cert2",
+   "fieldname": "student_cert2_pre",
+   "fieldtype": "Image",
+   "label": "\u0635\u0648\u0631\u0629 \u0627\u0644\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u062f\u0631\u0627\u0633\u064a\u0629 2",
+   "options": "student_cert2"
+  },
+  {
+   "depends_on": "eval:doc.student_cert3",
+   "fieldname": "student_cert3_pre",
+   "fieldtype": "Image",
+   "label": "\u0635\u0648\u0631\u0629 \u0627\u0644\u0634\u0647\u0627\u062f\u0629 \u0627\u0644\u062f\u0631\u0627\u0633\u064a\u0629 3",
+   "options": "student_cert3"
+  },
+  {
+   "fieldname": "column_break_tvoj4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cko1n",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wcscd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qb6k0",
+   "fieldtype": "Section Break"
   }
  ],
  "image_field": "student_passport",
@@ -150,7 +219,7 @@
    "link_fieldname": "bio"
   }
  ],
- "modified": "2023-06-03 10:45:31.044509",
+ "modified": "2023-06-07 00:27:19.623686",
  "modified_by": "Administrator",
  "module": "Student Registration",
  "name": "Student Registration",
@@ -166,6 +235,20 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
